@@ -1,6 +1,16 @@
 {
   "dependencies": [
     {
+      "name": "conprof",
+      "source": {
+        "git": {
+          "remote": "https://github.com/brancz/conprof",
+          "subdir": "deployments/jsonnet/conprof/"
+        }
+      },
+      "version": "better-jsonnet"
+    },
+    {
       "name": "grafana-builder",
       "source": {
         "git": {

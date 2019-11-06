@@ -79,7 +79,6 @@ spec:
           name: jaeger-thrift
         - containerPort: 5778
           name: configs
-      volumes: null
   volumeClaimTemplates:
   - metadata:
       name: thanos-store-data

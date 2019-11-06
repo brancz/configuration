@@ -102,10 +102,6 @@ spec:
           name: jaeger-thrift
         - containerPort: 5778
           name: configs
-      volumes:
-      - configMap:
-          name: observatorium-tenants-generated
-        name: observatorium-tenants
   volumeClaimTemplates:
   - metadata:
       name: thanos-receive-data

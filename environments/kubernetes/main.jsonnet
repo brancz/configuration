@@ -1,8 +1,10 @@
 local app =
   (import 'kube-thanos.libsonnet') +
   (import 'telemeter.libsonnet') +
-  (import 'jaeger.libsonnet');
+  (import 'jaeger.libsonnet') +
+  (import 'conprof.libsonnet');
 
+{ ['conprof-' + name]: app.conprof[name] for name in std.objectFields(app.conprof) } +
 { ['thanos-querier-' + name]: app.thanos.querier[name] for name in std.objectFields(app.thanos.querier) } +
 { ['thanos-receive-' + name]: app.thanos.receive[name] for name in std.objectFields(app.thanos.receive) } +
 { ['thanos-compactor-' + name]: app.thanos.compactor[name] for name in std.objectFields(app.thanos.compactor) } +

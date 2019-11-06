@@ -14,8 +14,8 @@ local app =
       list.asList('observatorium', {}, []) + {
         objects:
           $.thanos.template.objects +
-          $.telemeterServer.list.objects +
-          $.prometheusAms.template.objects,
+          $.prometheusAms.template.objects +
+          $.telemeterServer.list.objects,
 
         parameters:
           $.thanos.template.parameters +
